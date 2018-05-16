@@ -1,2 +1,0 @@
-Financial supports were provided by Johns Hopkins University internal funds,
-NSF Grant No. IIS-1653322: Co-Robotic Ultrasound Sensing in Bioengineering, NIGMS-/NIBIB-NIH Grant No. R01EB021396: Slicer+PLUS: Point-of-Care Ultrasound, NCI-NIH Grant No. R21CA202199: Prostate Specific Membrane Antigen Targeted Photoacoustic Imaging for Prostate Cancer, and NCI-NIH Grant No. R44CA192482, Development of a Mobile and Automated Platform for Multiplexed Multi Modality Imaging."
