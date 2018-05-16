@@ -9,10 +9,13 @@
 % ***************************************************************************/
 
 %% Parameter Setting
+% initialization
+clear all;
+close all;
 
 % pose to be used to 
 % eposes = 60;
-eposes = 6;
+eposes = 12;
 
 % number of points on phantom
 npoint = 12;
@@ -28,12 +31,9 @@ loop = 2;
 
 % number of poses to be simulated
 % poses = 120;
-poses = 12;
+poses = 24;
 
 %% Main code
-% initialization
-clear all;
-close all;
 
 % generate ground truth data
 [subA, supA, subB, supB, X, Y] = funPreparingAXXB(poses);
@@ -92,13 +92,13 @@ for m = 1:3
                 v = initV;
             end
         end
-%         minCost
+        
         fullA1 = (buildT(v(1:6)));
         partA = zeros(4,4,eposes);
         rot = zeros(4,4,eposes);
-        x = zeros(eposes,1);
-        y = zeros(eposes,1);
-        z = zeros(eposes,1);
+        x = zeros(1,eposes);
+        y = zeros(1,eposes);
+        z = zeros(1,eposes);
         
         for i = 2:eposes
             % initialization
@@ -135,8 +135,6 @@ for m = 1:3
         % set the first pose to be fully recovered A
         partA(:,:,1) = fullA1;
         minCost = inf;
-        
-%         tic
         
         % recover the unknown rotation in A
         count = 0;
@@ -176,7 +174,6 @@ for m = 1:3
         % solving X through AXXB
         [ reX, residual ] = solveAXXB(rsupA(:,:,1:count), esupB(:,:,1:count));
 
-        
         % setting the number of poses to be tested
         tposes = poses-eposes;
         
