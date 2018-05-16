@@ -38,5 +38,8 @@ Functions
 	param_extract2.m
 	- Calculating invariants
 
+	so3_vec.m
+	- Vectorize so3 rotation matrix
+
 	solveAXXB.m
 	- Least square based AXXB solver 
