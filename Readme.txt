@@ -17,6 +17,9 @@ Functions
 	decompose_rotation_d.m
 	- Decompose a rotation matrix to Euler angle representation
 
+	funAXXB.m
+	- Function to solve AXXB through minimization
+
 	funPhantomModel.m
 	- Build the phantom model
 
